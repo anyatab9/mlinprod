@@ -5,13 +5,13 @@ const mongoose = require('mongoose');
 const dbURI = "mongodb+srv://anyatab:anyapassword@cluster0.st098.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 mongoose.connect(dbURI)
-    .then(() => console.log('Connected to MongoDB'))
+    .then(() => console.log('Connected to MongoDBBB'))
     .catch(err => console.error('Failed to connect to MongoDB:', err));
 
 // Define a schema and model for Hotel Room
 const hotelRoomSchema = new mongoose.Schema({
     roomNumber: { type: Number, required: true, unique: true },
-    roomType: { type: String, required: true },
+    roomType: { type: String, required: true }, 
     pricePerNight: { type: Number, required: true },
     isBooked: { type: Boolean, default: false }
 });
